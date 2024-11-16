@@ -1,0 +1,294 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+.filter-section {
+    margin-bottom: 1.5em;
+}
+
+.filter-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+.filter-category label,
+.filter-price label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #666;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.filter-price {
+    display: flex;
+
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none;
+    background: #ddd;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#priceValue {
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Smooth Transition for All Elements */
+body, button, input, select, a {
+    transition: all 0.3s ease;
+}
+
+/* Body Styles */
+body {
+    background-color: #f4f4f4; /* Light background for better contrast */
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #004d00;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.5rem; 
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar nav a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.navbar nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+
+    width: 0;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
+    background-image: url('ss.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 1rem 2rem;
+    font-size: 1.2rem; 
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Form Section Animations */
+.form-section {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 2rem 0;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold; 
+}
+
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+
+#suggestionResults {
+    padding: 2rem;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.2rem;
+    }
+    
+    .form-section {
+        padding: 1.5rem;
+    }
+}
+
+.about-section, .vision-section, .values-section, .contact-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #004d00;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 0.5rem 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}

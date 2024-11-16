@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PestGuard - Pesticide Products</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <h1>PestGuard</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="suggestions.html">Suggestions</a>
+            <a href="products.html">Products</a>
+        </nav>
+        <input type="text" class="search-bar" placeholder="Search for pesticides...">
+    </header>
+
+    <!-- Sidebar and Product List -->
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Filter Products</h2>
+        
+            <div class="filter-section">
+                <h3>Category</h3>
+                <div class="filter-category">
+                    <label>
+                        <input type="checkbox" id="insecticides" name="insecticides">
+                        Insecticides
+                    </label>
+                    <label>
+                        <input type="checkbox" id="herbicides" name="herbicides">
+                        Herbicides
+                    </label>
+                    <label>
+                        <input type="checkbox" id="fungicides" name="fungicides">
+                        Fungicides
+                    </label>
+                    <label>
+                        <input type="checkbox" id="organic" name="organic">
+                        Organic
+                    </label>
+                </div>
+            </div>
+        
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="filter-price">
+                    <input type="range" min="100" max="1000" step="50" id="priceRange" oninput="updatePriceValue(this.value)">
+                    <p>Max Price: <span id="priceValue">₹1000</span></p>
+                </div>
+            </div>
+        </aside>
+        
+        <script>
+            function updatePriceValue(value) {
+                document.getElementById("priceValue").textContent = `₹${value}`;
+            }
+        </script>
+        
+        <!-- Product List -->
+        <main class="product-list">
+            <h2>Pesticides</h2>
+            <ul>
+                <li>
+                    <img src="OIP.jpeg" alt="Insecticide">
+                    <h3>Insecticide</h3>
+                    <p>Effective against aphids, caterpillars, and whiteflies.</p>
+                    <p><strong>₹500 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Insecticide A', 500)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="ab.webp" alt="Herbicide">
+                    <h3>Herbicide</h3>
+                    <p>Controls broadleaf weeds in rice and wheat.</p>
+                    <p><strong>₹750 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Herbicide B', 750)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="metrafenone.webp" alt="Fungicide">
+                    <h3>Fungicide</h3>
+                    <p>Prevents fungal diseases in grapes and vegetables.</p>
+                    <p><strong>₹600 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Fungicide C', 600)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="jhg.jpg" alt="Insecticide">
+                    <h3>Insecticide</h3>
+                    <p>Broad-spectrum insecticide for vegetable crops.</p>
+                    <p><strong>₹450 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Insecticide D', 450)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="ee.jpeg" alt="Herbicide">
+                    <h3>Herbicide</h3>
+                    <p>Controls weeds in legumes and pulses.</p>
+                    <p><strong>₹800 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Herbicide E', 800)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="71gS0VBtKWL.jpg" alt="Fungicide">
+                    <h3>Fungicide</h3>
+                    <p>Effective against powdery mildew in melons.</p>
+                    <p><strong>₹700 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Fungicide F', 700)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="neem.webp" alt="Organic Insecticide">
+                    <h3>Organic Insecticide</h3>
+                    <p>Natural neem-based insecticide for organic farming.</p>
+                    <p><strong>₹550 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Organic Insecticide G', 550)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="iugfd.jpeg" alt="Soil Fertilizer">
+                    <h3>Soil Fertilizer</h3>
+                    <p>Enhances soil fertility and crop yield.</p>
+                    <p><strong>₹900 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Soil Fertilizer H', 900)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="gr.avif" alt="Insecticide">
+                    <h3>Insecticide</h3>
+                    <p>Targets leafhoppers in rice and sugarcane.</p>
+                    <p><strong>₹650 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Insecticide I', 650)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="hg.jpeg" alt="Herbicide">
+                    <h3>Herbicide</h3>
+                    <p>Non-selective weed control for non-crop areas.</p>
+                    <p><strong>₹850 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Herbicide J', 850)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="gf.jpeg" alt="Fungicide">
+                    <h3>Fungicide</h3>
+                    <p>Prevents blast disease in paddy crops.</p>
+                    <p><strong>₹700 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Fungicide K', 700)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="iuyt.jpeg" alt="Rodenticide">
+                    <h3>Rodenticide</h3>
+                    <p>Controls rodents in agricultural fields and storage.</p>
+                    <p><strong>₹400 for 500 grams</strong></p>
+                    <button onclick="buyProduct('Rodenticide L', 400)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="bbbb.jpg" alt="Pesticide">
+                    <h3>Pesticide</h3>
+                    <p>Insecticide and fungicide blend for crop protection.</p>
+                    <p><strong>₹950 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Pesticide M', 950)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="vvv.jpeg" alt="Insecticide">
+                    <h3>Insecticide</h3>
+                    <p>For tomatoes against aphids and whiteflies.</p>
+                    <p><strong>₹600 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Insecticide N', 600)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="uyt.webp" alt="Herbicide">
+                    <h3>Herbicide</h3>
+                    <p>Controls grasses in maize and sorghum crops.</p>
+                    <p><strong>₹700 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Herbicide O', 700)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="ff.webp" alt="Fungicide">
+                    <h3>Fungicide</h3>
+                    <p>Prevents root rot in horticultural crops.</p>
+                    <p><strong>₹650 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Fungicide P', 650)">Buy Now</button>
+                </li>
+                <li>
+                    <img src="ss.jpeg" alt="Organic Pesticide">
+                    <h3>Organic Pesticide</h3>
+                    <p>Natural, eco-friendly pesticide for various pests.</p>
+                    <p><strong>₹500 for 1 liter</strong></p>
+                    <button onclick="buyProduct('Organic Pesticide Q', 500)">Buy Now</button>
+                </li>
+            </ul>
+        </main>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 PestGuard</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
